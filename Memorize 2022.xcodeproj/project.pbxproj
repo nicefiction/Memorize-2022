@@ -11,6 +11,7 @@
 		C5414E48282D5D160074931A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5414E47282D5D160074931A /* ContentView.swift */; };
 		C5414E4A282D5D170074931A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5414E49282D5D170074931A /* Assets.xcassets */; };
 		C5414E4D282D5D170074931A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5414E4C282D5D170074931A /* Preview Assets.xcassets */; };
+		C5455B66282E8EEB00D89A9D /* AssignmentOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5455B65282E8EEB00D89A9D /* AssignmentOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C5414E47282D5D160074931A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C5414E49282D5D170074931A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5414E4C282D5D170074931A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C5455B65282E8EEB00D89A9D /* AssignmentOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				C5414E47282D5D160074931A /* ContentView.swift */,
 				C5414E49282D5D170074931A /* Assets.xcassets */,
 				C5414E4B282D5D170074931A /* Preview Content */,
+				C5455B65282E8EEB00D89A9D /* AssignmentOne.swift */,
 			);
 			path = "Memorize 2022";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5455B66282E8EEB00D89A9D /* AssignmentOne.swift in Sources */,
 				C5414E48282D5D160074931A /* ContentView.swift in Sources */,
 				C5414E46282D5D160074931A /* Memorize_2022App.swift in Sources */,
 			);
