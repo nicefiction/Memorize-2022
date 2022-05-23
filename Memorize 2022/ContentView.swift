@@ -13,36 +13,12 @@ struct ContentView: View {
     
     // MARK: - PROPERTIES
     var emojis: Array<String> = [
-        "🚗", "🚕", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🛵", "🛺", "🚃", "🚁"
+        "🚲", "🚗", "🚕", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🛵", "🛺", "🚃", "🚁"
     ]
     
     
     
     // MARK: - COMPUTED PROPERTIES
-    var removeCard: some View {
-        
-        return Button {
-            if emojiCount > 1 {
-                emojiCount -= 1
-            }
-        } label: {
-            Image(systemName: "minus.rectangle.portrait")
-        }
-    }
-    
-    
-    var addCard: some View {
-        
-        return Button {
-            if emojiCount < emojis.count {
-                emojiCount += 1
-            }
-        } label: {
-            Image(systemName: "plus.rectangle.portrait")
-        }
-    }
-    
-    
     var body: some View {
         
         // let columnLayout = [GridItem(), GridItem(), GridItem()]
@@ -62,14 +38,6 @@ struct ContentView: View {
                 }
             }
             .padding(.horizontal)
-            Spacer()
-            HStack {
-                removeCard
-                Spacer()
-                addCard
-            }
-            .padding()
-            .font(.largeTitle)
         }
     }
     
