@@ -9,10 +9,14 @@ struct Memorize_2022App: App {
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
     // MARK: - PROPERTIES
+    let emojiMemoryGameViewModel = EmojiMemoryGameViewModel.init()
+    
+    
+    
     // MARK: - COMPUTED PROPERTIES
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(emojiMemoryGameViewModel: emojiMemoryGameViewModel)
         }
     }
     

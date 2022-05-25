@@ -3,12 +3,14 @@ import Foundation
 
 
 
-struct MemoryGameModel<CardContent> {
+struct MemoryGameModel<CardContent>
+where CardContent: Equatable {
 
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
     // MARK: - PROPERTIES
     private(set) var cards: Array<Card>
+    private var index0fTheOneAndOnlyFaceUpCard: Int?
     
     
     
@@ -33,10 +35,32 @@ struct MemoryGameModel<CardContent> {
     
     
     // MARK: - METHODS
-    func choose(_ card: Card)
-    -> Void {}
+    mutating func choose(_ card: Card)
+    -> Void {
+        
+        if let unwrappedIndex = cards.firstIndex(where: { $0.id == card.id }),
+           !cards[unwrappedIndex].isFaceUp,
+           !cards[unwrappedIndex].isMatched {
+            if let potentialMatchIndex = index0fTheOneAndOnlyFaceUpCard {
+                if cards[unwrappedIndex].content == cards[potentialMatchIndex].content {
+                    cards[unwrappedIndex].isMatched = true
+                    cards[potentialMatchIndex].isMatched = true
+                }
+                index0fTheOneAndOnlyFaceUpCard = nil
+            } else {
+                for index in cards.indices {
+                    cards[index].isFaceUp = false
+                }
+                index0fTheOneAndOnlyFaceUpCard = unwrappedIndex
+            }
+            cards[unwrappedIndex].isFaceUp.toggle()
+        }
+        print("\(cards)")
+    }
     
     
     
     // MARK: - HELPER METHODS
 }
+
+

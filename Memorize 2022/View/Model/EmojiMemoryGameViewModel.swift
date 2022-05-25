@@ -3,7 +3,7 @@ import SwiftUI
 
 
 
-class EmojiMemoryGameViewModel {
+class EmojiMemoryGameViewModel: ObservableObject {
 
     // MARK: - STATIC PROPERTIES
     static let emojiMemoryGame: Array<String> = [
@@ -14,7 +14,7 @@ class EmojiMemoryGameViewModel {
     
     // MARK: - PROPERTY WRAPPERS
     // MARK: - PROPERTIES
-    private var memoryGameModel: MemoryGameModel<String> = EmojiMemoryGameViewModel.createEmojiMemoryGame()
+    @Published private var memoryGameModel: MemoryGameModel<String> = EmojiMemoryGameViewModel.createEmojiMemoryGame()
     
     
     
@@ -31,11 +31,18 @@ class EmojiMemoryGameViewModel {
     static func createEmojiMemoryGame()
     -> MemoryGameModel<String> {
         
-        return MemoryGameModel.init(numberOfPairsOfCards: 4,
-                                    createCardContent: {(index: Int) in return Self.emojiMemoryGame[index]})
+        return MemoryGameModel<String>.init(numberOfPairsOfCards: 4,
+                                            createCardContent: {(pairIndex: Int) in
+            
+            return Self.emojiMemoryGame[pairIndex]
+        })
     }
     
     
     
-    // MARK: - HELPER METHODS
+    // MARK: - INTENT METHODS
+    func choose(_ card: MemoryGameModel<String>.Card)
+    -> Void {
+        memoryGameModel.choose(card)
+    }
 }

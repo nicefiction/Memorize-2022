@@ -15,6 +15,7 @@
 		C5455B6C282EB06400D89A9D /* MemoryGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5455B6B282EB06400D89A9D /* MemoryGameModel.swift */; };
 		C5455B6E282EB2C700D89A9D /* EmojiMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5455B6D282EB2C700D89A9D /* EmojiMemoryGameViewModel.swift */; };
 		C54D4269283BED0C00470B06 /* MemoryGame+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D4268283BED0C00470B06 /* MemoryGame+Card.swift */; };
+		C54D426B283D09B200470B06 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D426A283D09B200470B06 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C5455B6B282EB06400D89A9D /* MemoryGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameModel.swift; sourceTree = "<group>"; };
 		C5455B6D282EB2C700D89A9D /* EmojiMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameViewModel.swift; sourceTree = "<group>"; };
 		C54D4268283BED0C00470B06 /* MemoryGame+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryGame+Card.swift"; sourceTree = "<group>"; };
+		C54D426A283D09B200470B06 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,6 @@
 				C5414E4B282D5D170074931A /* Preview Content */,
 				C5455B68282EAB6800D89A9D /* Model */,
 				C5455B67282EAB6100D89A9D /* View */,
-				C5455B65282E8EEB00D89A9D /* AssignmentOne.swift */,
-				C5414E47282D5D160074931A /* ContentView.swift */,
 			);
 			path = "Memorize 2022";
 			sourceTree = "<group>";
@@ -82,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				C5455B69282EAB7D00D89A9D /* Model */,
+				C5455B65282E8EEB00D89A9D /* AssignmentOne.swift */,
+				C54D426A283D09B200470B06 /* CardView.swift */,
+				C5414E47282D5D160074931A /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54D426B283D09B200470B06 /* CardView.swift in Sources */,
 				C5455B66282E8EEB00D89A9D /* AssignmentOne.swift in Sources */,
 				C5455B6C282EB06400D89A9D /* MemoryGameModel.swift in Sources */,
 				C5414E48282D5D160074931A /* ContentView.swift in Sources */,
