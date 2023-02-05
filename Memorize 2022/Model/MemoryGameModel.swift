@@ -35,12 +35,39 @@ where CardContent: Equatable {
     
     
     // MARK: - METHODS
+    
+    /*
+    mutating func choose(_ card: Card)
+    -> Void {
+        
+        if let unwrappedIndex = cards.firstIndex(where: { $0.id == card.id })
+//           ,!cards[unwrappedIndex].isFaceUp,
+//           !cards[unwrappedIndex].isMatched
+        {
+//            if let potentialMatchIndex = index0fTheOneAndOnlyFaceUpCard {
+//                if cards[unwrappedIndex].content == cards[potentialMatchIndex].content {
+//                    cards[unwrappedIndex].isMatched = true
+//                    cards[potentialMatchIndex].isMatched = true
+//                }
+//                index0fTheOneAndOnlyFaceUpCard = nil
+//            } else {
+                for index in cards.indices {
+                    cards[index].isFaceUp = false
+                }
+                index0fTheOneAndOnlyFaceUpCard = unwrappedIndex
+//            }
+            cards[unwrappedIndex].isFaceUp.toggle()
+        }
+        print("\(cards)")
+    }
+      */
     mutating func choose(_ card: Card)
     -> Void {
         
         if let unwrappedIndex = cards.firstIndex(where: { $0.id == card.id }),
            !cards[unwrappedIndex].isFaceUp,
-           !cards[unwrappedIndex].isMatched {
+           !cards[unwrappedIndex].isMatched
+        {
             if let potentialMatchIndex = index0fTheOneAndOnlyFaceUpCard {
                 if cards[unwrappedIndex].content == cards[potentialMatchIndex].content {
                     cards[unwrappedIndex].isMatched = true
@@ -57,10 +84,35 @@ where CardContent: Equatable {
         }
         print("\(cards)")
     }
+     
     
     
     
     // MARK: - HELPER METHODS
+    /*
+     mutating func choose(_ card: Card)
+     -> Void {
+         
+         if let unwrappedIndex = cards.firstIndex(where: { $0.id == card.id }),
+            !cards[unwrappedIndex].isFaceUp,
+            !cards[unwrappedIndex].isMatched {
+             if let potentialMatchIndex = index0fTheOneAndOnlyFaceUpCard {
+                 if cards[unwrappedIndex].content == cards[potentialMatchIndex].content {
+                     cards[unwrappedIndex].isMatched = true
+                     cards[potentialMatchIndex].isMatched = true
+                 }
+                 index0fTheOneAndOnlyFaceUpCard = nil
+             } else {
+                 for index in cards.indices {
+                     cards[index].isFaceUp = false
+                 }
+                 index0fTheOneAndOnlyFaceUpCard = unwrappedIndex
+             }
+             cards[unwrappedIndex].isFaceUp.toggle()
+         }
+         print("\(cards)")
+     }
+     */
 }
 
 

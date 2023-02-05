@@ -17,7 +17,7 @@ class EmojiMemoryGameViewModel: ObservableObject {
     @Published private var memoryGameModel: MemoryGameModel<String> = EmojiMemoryGameViewModel.createEmojiMemoryGame()
     
     
-    
+
     // MARK: - COMPUTED PROPERTIES
     var cards: Array<MemoryGameModel<String>.Card> {
         return memoryGameModel.cards
@@ -46,3 +46,4 @@ class EmojiMemoryGameViewModel: ObservableObject {
         memoryGameModel.choose(card)
     }
 }
+
